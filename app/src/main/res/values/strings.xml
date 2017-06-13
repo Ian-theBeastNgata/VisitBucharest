@@ -1,4 +1,356 @@
 <resources>
     <string name="app_name">Visit Bucharest</string>
     <string name="audio_name">Audio Guide</string>
+    <string name="image">Image</string>
+    <!--Array text for AudioActivity-->
+    <string name="en_morning">Good morning!</string>
+    <string name="ro_morning">Buna dimineata!</string>
+    <string name="en_hello">Hello!!</string>
+    <string name="ro_hello">Buna ziua!</string>
+    <string name="ro_hello2">Salut!</string>
+    <string name="en_evening">Good evening!</string>
+    <string name="ro_evening">Buna seara!</string>
+    <string name="en_night">Good night!</string>
+    <string name="ro_night">Noapte buna!</string>
+    <string name="en_excuse">Excuse me!</string>
+    <string name="ro_excuse">Ma scuzati!</string>
+    <string name="en_thank">Thank you!</string>
+    <string name="ro_thank">Multumesc!</string>
+    <string name="en_goodbye">Goodbye!</string>
+    <string name="ro_goodbye">La revedere!</string>
+    <!--Array text for AttractionsFragment-->
+    <!--Palace of Parliament-->
+    <string name="casapoporului_name">Palace of the Parliament</string>
+    <string name="casapoporuluui_business">Architectural attraction</string>
+    <string name="casapoporului_adress">Strada Izvor 2-4, Sector 5, Bucharest</string>
+    <string name="casapoporului_web">www.casapoporului.ro</string>
+    <string name="casapoporului_phone">40 21 316 0300</string>
+    <string name="casapoporului_category">$</string>
+    <string name="casapoporului_description">A colossal parliament building known for its ornate
+        interior composed of 23 sections, it houses the Senate and the Chamber of Deputies, three
+        museums and an international conference center.</string>
+    <string name="casapoporului_schedule">Monday - Sunday: 10:00 - 16:00</string>
+    <!--AteneulRoman-->
+    <string name="ateneulroman_name">Romanian Athenaeum</string>
+    <string name="ateneulroman_business">Concert hall</string>
+    <string name="ateneulroman_adress">Strada Benjamin Franklin 1-3, Sector 1, Bucharest</string>
+    <string name="ateneulroman_web">-</string>
+    <string name="ateneulroman_phone">40 21 315 2567</string>
+    <string name="ateneulroman_category">$$</string>
+    <string name="ateneulroman_description">The Romanian Athenaeum (Romanian: Ateneul Român) is a
+        concert hall in the center of Bucharest, Romania and a landmark of the Romanian capital city.
+        Opened in 1888, the ornate, domed, circular building is the city\'s main concert hall and home
+        of the \"George Enescu\" Philharmonic and of the George Enescu annual international music
+        festival.</string>
+    <string name="ateneulroman_schedule">-</string>
+    <!--Arcul de Triumf-->
+    <string name="arculdetriumf_name">The Arc of Triomf</string>
+    <string name="arculdetriumf_business">Monument</string>
+    <string name="arculdetriumf_adress">Piața Arcul de Triumf, Sector 1, Bucharest</string>
+    <string name="arculdetriumf_web">-</string>
+    <string name="arculdetriumf_phone">40 78 758 4104</string>
+    <string name="arculdetriumf_category">$</string>
+    <string name="arculdetriumf_description">The current arch has a height of 27 metres and was
+        built after the plans of the architect Petre Antonescu. It has as its foundation a 25 x 11.50
+        metres rectangle. The sculptures with which the facades are decorated were created by famous
+        Romanian sculptors such as Ion Jalea and Dimitrie Paciurea. Nowadays, military parades are held
+        beneath the arch each 1 December, with the occasion of Romania\'s national holiday.</string>
+    <string name="arculdetriumf_schedule">-</string>
+    <!--Palatul Cotroceni-->
+    <string name="cotroceni_name">Cotroceni Palace</string>
+    <string name="cotroceni_business">Museum</string>
+    <string name="cotroceni_adress">Bulevardul Geniului 1, Bucharest</string>
+    <string name="cotroceni_web">http://www.muzeulcotroceni.ro</string>
+    <string name="cotroceni_phone">40 21 317 3100</string>
+    <string name="cotroceni_category">$$</string>
+    <string name="cotroceni_description">Between 1679 and 1681 the prince Şerban Cantacuzino (1678
+        - 1688) built, in the West of Bucharest, the Cotroceni ensemble, his most important
+        architectural endeavour. It stood out through the Assumption Church, dedicated to Virgin Mary,
+        a structure similar in style to the one in Curtea de Argeş, and through the impressive palace,
+        decorated in the Baroque style that dominated Western European architecture at that time.</string>
+    <string name="cotroceni_schedule">Monday - Friday: 9:30 - 16:30</string>
+    <!--George Enescu Museum-->
+    <string name="enescu_name">The National Museum George Enescu</string>
+    <string name="enescu_business">Museum</string>
+    <string name="enescu_adress">Calea Victoriei 141, Bucharest</string>
+    <string name="enescu_web">http://www.georgeenescu.ro</string>
+    <string name="enescu_phone">40 21 318 1450</string>
+    <string name="enescu_category">$</string>
+    <string name="enescu_description">The National Museum George Enescu was opened in the Cantacuzino
+        Palace, one of the most beautiful buildings in Bucharest, a historical monument and one of
+        the European Heritage Label buildings. The sumptuous entrance, in Art Nouveau style,
+        announces the luxury and the refinement of the époque, reunited in one of the most
+        imposing palaces in Bucharest.</string>
+    <string name="enescu_schedule">Monday: closed \n Tuesday – Sunday: 10:00 - 17:00</string>
+
+    <!--Array text for FoodFragment-->
+    <!--Fittocafe Floreasca-->
+    <string name="fitofloreasca_name">Fitto Cafe Floreasca</string>
+    <string name="fitofloreasca_business">Cafe</string>
+    <string name="fitofloreasca_adress">Calea Floreasca Nr 70-72, Bucharest</string>
+    <string name="fitofloreasca_web">http://fittocafe.ro</string>
+    <string name="fitofloreasca_phone">40 21 230 9093</string>
+    <string name="fitofloreasca_category">$$</string>
+    <string name="fitofloreasca_description">The story of Fitto Cafe begins seven years ago. It all
+        started with an apple, which became our symbol, because it represents a fresh
+        and healthy diet, hence the quotation „An apple a day keeps the doctor away! Today,
+        Fitto Cafe is, as we like to call it, another type of cafe. It is what you need in a
+        crowded Bucharest, a cozy place, where you can have a quick and tasty breakfast, a healthy
+        lunch or enjoy a relaxing dinner and a glass of wine.</string>
+    <string name="fitofloreasca_schedule">Monday - Sunday  9:00 – 00:00</string>
+    <!--Fittocafe Victoriei-->
+    <string name="fitovictoriei_name">Fitto Cafe Victoriei</string>
+    <string name="fitovictoriei_business">Cafe</string>
+    <string name="fitovictoriei_adress">Strada Nicolae Titulescu Nr 4 – 8, Bucharest</string>
+    <string name="fitovictoriei_web">http://fittocafe.ro</string>
+    <string name="fitovictoriei_phone">40 21 230 9093</string>
+    <string name="fitovictoriei_category">$$</string>
+    <string name="fitovictoriei_description">The story of Fitto Cafe begins seven years ago. It all
+        started with an apple, which became our symbol, because it represents a fresh
+        and healthy diet, hence the quotation „An apple a day keeps the doctor away! Today,
+        Fitto Cafe is, as we like to call it, another type of cafe. It is what you need in a
+        crowded Bucharest, a cozy place, where you can have a quick and tasty breakfast, a healthy
+        lunch or enjoy a relaxing dinner and a glass of wine.</string>
+    <string name="fitovictoriei_schedule">Monday - Friday:  8:00 – 22:00 \nSaturday - Sunday:  9:00 – 18:00</string>
+    <!--Chefs Experience-->
+    <string name="chefs_name">Chefs Experience</string>
+    <string name="chefs_business">Restaurant</string>
+    <string name="chefs_adress">Calea Floreasca, nr. 55, Bucharest</string>
+    <string name="chefs_web">http://www.chefsexperience.ro</string>
+    <string name="chefs_phone">40 72 385 6916</string>
+    <string name="chefs_category">$$$</string>
+    <string name="chefs_description">Chefs Experience este un restaurant care ofera mai mult decat
+        preparate savuroase, unul care promite ca timpul petrecut sa fie o adevarata experienta. Cu
+        un design ecletic cu influente industriale, Chefs te uimeste inca de la intrare prin
+        asocierea elementelor si detaliilor folosite, si te introduce intr-o atmosfera inedita si
+        relaxanta. </string>
+    <string name="chefs_schedule">Monday- Sunday: 10:30-3:00</string>
+    <!--Victoriei18-->
+    <string name="victoriei_name">Victoriei 18</string>
+    <string name="victoriei_business">Restaurant</string>
+    <string name="victoriei_adress">Calea Victoriei 16-20, Bucharest</string>
+    <string name="victoriei_web">-</string>
+    <string name="victoriei_phone">40 74 941 6962</string>
+    <string name="victoriei_category">$$</string>
+    <string name="victoriei_description">Victoriei 18 este un restaurant-vitrina care aduce in
+        acelasi spatiu atat preparate savuroase, cat si piese de design romanesc. Legatura locatiei
+        cu designul a inceput cu mult timp in urmă, cand in locul restaurantului se afla magazinul
+        Expo Moda, care a stabilit in anii \‘60 – \’80 printre putinele contacte ale capitalei cu
+        moda occidentala. Acum, Expo Moda e prezenta nu doar prin literele originale din vechea
+        fatada, care sunt restaurate si folosite in amenajarea spatiului, ci si in esenta
+        conceptului Victoriei 18, care isi propune sa sustina si sa expuna obiecte realizate de
+        designeri romani.</string>
+    <string name="victoriei_schedule">Monday- Sunday: 10:30-3:00</string>
+    <!--Bocca Lupo-->
+    <string name="boccalupo_name">Bocca Lupo</string>
+    <string name="boccalupo_business">Restaurant</string>
+    <string name="boccalupo_adress">Blv. Alexandru Șerbănescu, nr. 87, Bucharest</string>
+    <string name="boccalupo_web">http://boccalupo.ro</string>
+    <string name="boccalupo_phone">40 31 620 1243</string>
+    <string name="boccalupo_category">$$</string>
+    <string name="boccalupo_description">Noul Bocca Lupo arata foarte bine, simtindu-se din plin
+        mana si inspiratia arhitectului Cristian Corvin.</string>
+    <string name="boccalupo_schedule">Monday- Saturday: 16:00 - 00:00</string>
+    <!--Array text for HotelFragment-->
+    <!--Ramada Majestic Bucharest-->
+    <string name="ramada_name">Ramada Majestic Bucharest</string>
+    <string name="ramada_business">Hotel</string>
+    <string name="ramada_adress">Calea Victoriei 38-40, Sector 1, Bucharest</string>
+    <string name="ramada_web">http://www.ramadamajestic.ro</string>
+    <string name="ramada_phone">40 21 310 2335</string>
+    <string name="ramada_category">4 - Stars</string>
+    <string name="ramada_description">Ramada Majestic Bucharest Hotel is located at the \“0\” Km of
+        Bucharest, in the business, financial, cultural and shopping centre  of Bucharest, closely
+        to \“Universitatii Square\”, considered “the heart of Bucharest, on Calea Victoriei, one
+        of the oldest main street in Bucharest, the site of many monuments and important
+        institutions.</string>
+    <string name="ramada_schedule">Non stop</string>
+    <!--Radisson Blu Hotel Bucharest-->
+    <string name="radisson_name">Radisson Blu Bucharest</string>
+    <string name="radisson_business">Hotel</string>
+    <string name="radisson_adress">Calea Victoriei 63 - 81, Sector 1, Bucharest</string>
+    <string name="radisson_web">https://www.radissonblu.com</string>
+    <string name="radisson_phone">40 21 311 9000</string>
+    <string name="radisson_category">5 - Stars</string>
+    <string name="radisson_description">Rest well in sumptuous  5-star accommodation in an enviable
+        site by Cismigiu Park. Our hotel features 487 well-appointed rooms and suites featuring the
+        creativity of architect Uri Blumenthal and designer Buki Zuker. Guests benefit from
+        aesthetic appeal as well as modern amenities  such as a SMART LED TV and Free high-speed,
+        wireless Internet.</string>
+    <string name="radisson_schedule">Non stop</string>
+    <!--JW Marriott Bucharest-->
+    <string name="mariott_name">JW Marriott Bucharest</string>
+    <string name="mariott_business">Hotel</string>
+    <string name="mariott_adress">Calea 13 Septembrie 90, Sector 5, Bucharest</string>
+    <string name="mariott_web">https://www.marriott.com</string>
+    <string name="mariott_phone">40 21 403 0000</string>
+    <string name="mariott_category">5 - Stars</string>
+    <string name="mariott_description">With historic elegance and refined luxury, the JW  Marriott
+        Bucharest Grand Hotel inspires extraordinary experiences here in Romania.  Our staff is
+        dedicated to providing every visitor with first-class service. We\'re a short distance away
+        from the city\'s famed Old Town, next to Parliament Palace and easy access to Bucharest\'s
+        most popular attractions.</string>
+    <string name="mariott_schedule">Non stop</string>
+    <!--Park Inn by Radisson Bucharest-->
+    <string name="parkinn_name">Park Inn by Radisson</string>
+    <string name="parkinn_business">Hotel</string>
+    <string name="parkinn_adress">Strada Luterană 4, Sector 1, Bucharest</string>
+    <string name="parkinn_web">https://www.parkinn.com/hotel-bucharest</string>
+    <string name="parkinn_phone">40 21 601 3600</string>
+    <string name="parkinn_category">4 - Stars</string>
+    <string name="parkinn_description">Contact the Park Inn by Radisson Bucharest Hotel Residence to
+        make reservations at the perfect lodging choice for both corporate and leisure travellers
+        with any itinerary. Rest well in one of the rooms, or opt for an apartment for an extended
+        holiday. On-site dining options include a convenient all-day restaurant, lobby bar and a
+        delightful breakfast establishment. The 4 flexible meeting facilities provide ample space
+        and equipment for events, both business and personal.</string>
+    <string name="parkinn_schedule">Non stop</string>
+    <!--Royal Hotel Bucharest-->
+    <string name="royal_name">Royal Hotel Bucharest</string>
+    <string name="royal_business">Hotel</string>
+    <string name="royal_adress">Bulevardul Mircea Vodă 28, Sector 3, Bucharest</string>
+    <string name="royal_web">http://www.hotelroyalbucharest.ro</string>
+    <string name="royal_phone">40 21 528 1100</string>
+    <string name="royal_category">4 - Stars</string>
+    <string name="royal_description">Hotel Royal is located just minutes away from  the centre of
+        Bucharest and the historical centre itself. Also within walking distance are good public
+        transport links to the business and shopping areas along with numerous touristic
+        attractions.</string>
+    <string name="royal_schedule">Non stop</string>
+    <!--Unique Bucharest-->
+    <string name="unique_name">Unique Bucharest</string>
+    <string name="unique_business">Hotel</string>
+    <string name="unique_adress">Caderea Bastiliei St.,Nr 35, Sector 1, Bucharest</string>
+    <string name="unique_web">http://www.hotelunique.ro</string>
+    <string name="unique_phone">40 21 319 4591</string>
+    <string name="unique_category">4 - Stars</string>
+    <string name="unique_description">Discover a breath-taking panorama of our city and  enjoy your
+        visit in Bucharest at Hotel Unique, a boutique hotel offering you accommodation at
+        international standards and high quality amenities. We have the great pleasure to welcome
+        our guests in a modern hotel in Bucharest redecorated and up-graded each year continuing
+        improving amenities year by year and day by day till now August 2015 with a brand new
+        relaxing Summer Garden.</string>
+    <string name="unique_schedule">Non stop</string>
+    <!--Array text for KidsAttractionsFragment-->
+    <!--Bucharest ZOO-->
+    <string name="zoo_name">Bucharest ZOO</string>
+    <string name="zoo_business">ZOO</string>
+    <string name="zoo_adress">Aleea Vadul Moldovei nr. 4, Bucharest</string>
+    <string name="zoo_web">http://www.zoobucuresti.com</string>
+    <string name="zoo_phone">40 21 269 0600</string>
+    <string name="zoo_category">$</string>
+    <string name="zoo_description">Bucharest Zoo Garden is a great place to spend an afternoon when
+        you visit the Romanian Capital. The Zoo is outside Bucharest, near Baneasa Forest and also
+        near Baneasa Shopping Center. So, if you have time and need some fresh air and also a
+        shopping tour in an elegant mall, you might like the area. You have the 301 bus to take you
+        right at the Zoo.</string>
+    <string name="zoo_schedule">Summer \n Monday - Friday: 9:00- 19:00\n Saturday-Sunday: 8:00 -
+        18:00\n Winter \n Monday - Sunday: 9:00- 17:00</string>
+    <!--The city of knowledge-->
+    <string name="knowledgecity_name">The city of knowledge</string>
+    <string name="knowledgecity_business">Interactive museum</string>
+    <string name="knowledgecity_adress">Str. Pajurei nr.3A , Bucharest</string>
+    <string name="knowledgecity_web">http://www.zoobucuresti.com</string>
+    <string name="knowledgecity_phone">40 21 269 0600</string>
+    <string name="knowledgecity_category">$$$</string>
+    <string name="knowledgecity_description">Orășelul Cunoașterii este un science center deschis în
+        februarie 2014, în București. Scopul nostru este să \"împrietenim\" copiii cu științele,
+        prin joc, să le explicăm lumea într-un limbaj simplu și amuzant. Iar joaca nu este doar
+        pentru copii. </string>
+    <string name="knowledgecity_schedule">Monday - Sunday: 9:00- 17:00</string>
+    <!--The Astronomical Observatory-->
+    <string name="observatory_name">The Astronomical Observatory</string>
+    <string name="observatory_business">Astronomical observer</string>
+    <string name="observatory_adress">Bd. Lascăr Catargiu, Bucharest</string>
+    <string name="observatory_web">http://www.astro-urseanu.ro</string>
+    <string name="observatory_phone">40 21 269 0600</string>
+    <string name="observatory_category">$</string>
+    <string name="observatory_description">Observatorul Astronomic \"Amiral Vasile Urseanu\" al
+        Municipiului București, este o instituție muzeistică, destinată popularizării astronomiei,
+        subunitate a Muzeului Municipiului București.</string>
+    <string name="observatory_schedule">See the website for details</string>
+    <!--The C.F.R. Museum-->
+    <string name="cfr_name">C.F.R. Museum</string>
+    <string name="cfr_business">Museum</string>
+    <string name="cfr_adress">Bd. Lascăr Catargiu, Bucharest</string>
+    <string name="cfr_web">-</string>
+    <string name="cfr_phone">40 21 269 0600</string>
+    <string name="cfr_category">$</string>
+    <string name="cfr_description">Muzeul CFR este locul în care puteți plonja înapoi în timp,
+        parcurgând istoria de peste un secol al uneia dintre cele mai spectaculoase invenții
+        omenești: calea ferată.</string>
+    <string name="cfr_schedule">Monday - Sunday: 9:00- 17:00</string>
+    <!--The Antipa Museum-->
+    <string name="antipa_name">The Antipa Museum</string>
+    <string name="antipa_business">Museum</string>
+    <string name="antipa_adress">Sos. Kiseleff nr. 1, Bucharest</string>
+    <string name="antipa_web">http://antipa.ro</string>
+    <string name="antipa_phone">40 21 269 0600</string>
+    <string name="antipa_category">$</string>
+    <string name="antipa_description">Unul dintre cele mai cunoscute muzee din Bucuresti si din
+        tara, Muzeul Antipa a fost intotdeauna preferatul celor mici.</string>
+    <string name="antipa_schedule">Monday - Sunday: 9:00- 17:00</string>
+    <!--Kiseleff Park-->
+    <string name="kiseleff_name">Kiseleff Park</string>
+    <string name="kiseleff_business">Park</string>
+    <string name="kiseleff_adress">Sos. Kiseleff , Bucharest</string>
+    <string name="kiseleff_web">-</string>
+    <string name="kiseleff_phone">-</string>
+    <string name="kiseleff_category">Free</string>
+    <string name="kiseleff_description">Parcul Kiseleff este un parc din București, amplasat de-o
+        parte și de alta a Șoselei Kiseleff în triunghiul descris de bulevardul Ion Mihalache,
+        bulevardul Aviatorilor și strada Ion Mincu.</string>
+    <string name="kiseleff_schedule">Non stop</string>
+    <!--Array text for NightLifeFragment-->
+    <!--Spice Club-->
+    <string name="spice_name">Spice Club</string>
+    <string name="spice_business">Club</string>
+    <string name="spice_adress">Calea Victoriei nr.21-23, Bucharest</string>
+    <string name="spice_web">http://www.spiceclub.ro</string>
+    <string name="spice_phone">40 76 626 0390</string>
+    <string name="spice_category">$$</string>
+    <string name="spice_description">One step into Spice Club, and you know you\’ve arrived
+        somewhere special. Bring your friends, we have enough space.</string>
+    <string name="spice_schedule">Saturday-Sunday: 17:00-05:00</string>
+    <!--Oldies Club-->
+    <string name="oldies_name">Oldies Club</string>
+    <string name="oldies_business">Club</string>
+    <string name="oldies_adress">Ion Câmpineanu 16 Bucharest</string>
+    <string name="oldies_web">http://www.oldiesclub.ro</string>
+    <string name="oldies_phone">40 72 521 9630</string>
+    <string name="oldies_category">$$</string>
+    <string name="oldies_description">Oldies isi propune sa dezvolte un mix de muzica, dans, cultura,
+        arta in toate formele sale.</string>
+    <string name="oldies_schedule">Saturday-Sunday: 17:00-05:00</string>
+    <!--True Social Club-->
+    <string name="truesocial_name">True Social Club</string>
+    <string name="truesocial_business">Club</string>
+    <string name="truesocial_adress">Lipscani, Bucharest</string>
+    <string name="truesocial_web">http://trueclub.ro</string>
+    <string name="truesocial_phone">40 72 521 9630</string>
+    <string name="truesocial_category">$$</string>
+    <string name="truesocial_description">Singurul club din Centrul Istoric (Bucuresti) in care
+        muzica live are exclusivitate!</string>
+    <string name="truesocial_schedule">Monday-Sunday: 18:00-05:00</string>
+    <!--Abel's Wine Bar-->
+    <string name="abel_name">Abel\'s Wine Bar</string>
+    <string name="abel_business">Wine Bar</string>
+    <string name="abel_adress">10 Nicolae Tonitza Bucharest</string>
+    <string name="abel_web">http://abelswinebar.ro</string>
+    <string name="abel_phone">40 72 521 9630</string>
+    <string name="abel_category">$$$</string>
+    <string name="abel_description">Ne-am propus sa mizam pe o politica in care sa punem un accent
+        deosebit pe calitatea produselor din oferta.</string>
+    <string name="abel_schedule">Monday-Saturday: 4:00-00:00</string>
+    <!--Hang Over Club-->
+    <string name="hangover_name">Hang Over Club</string>
+    <string name="hangover_business">Club</string>
+    <string name="hangover_adress">Strada Șelimbăr 1 Bucharest</string>
+    <string name="hangover_web">http://clubhangover.ro</string>
+    <string name="hangover_phone">40 720 620 766</string>
+    <string name="hangover_category">$$</string>
+    <string name="hangover_description">The place Where the City Never sleeps and where you will
+        find: amazing parties, beautifull people, great music, awsome drinks.</string>
+    <string name="hangover_schedule">Monday-Saturday: 4:00-00:00</string>
+
 </resources>

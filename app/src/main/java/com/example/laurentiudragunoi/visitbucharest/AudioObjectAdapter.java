@@ -21,13 +21,13 @@ public class AudioObjectAdapter extends ArrayAdapter<AudioObject> {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
 
-            //Find the textView in the audio_item.xml layout
+        //Find the textView in the audio_item.xml layout
 
-            View audioListView = convertView;
-            if (audioListView == null) {
-                audioListView = LayoutInflater.from(getContext()).inflate(R.layout.audio_item, parent, false);
-            }
-       //Find the TextView in the audio_item.xml layout with the ID english_text_view
+        View audioListView = convertView;
+        if (audioListView == null) {
+            audioListView = LayoutInflater.from(getContext()).inflate(R.layout.audio_item, parent, false);
+        }
+        //Find the TextView in the audio_item.xml layout with the ID english_text_view
         TextView englishTextView = (TextView) audioListView.findViewById(R.id.english_text_view);
         // Get and set text in the current position for each expression.
         AudioObject currentAudio = getItem(position);
@@ -39,7 +39,7 @@ public class AudioObjectAdapter extends ArrayAdapter<AudioObject> {
         currentAudio = getItem(position);
         romanianTextView.setText(currentAudio.getmRomanianTranslation());
 
-         return audioListView;
+        return audioListView;
     }
 }
 

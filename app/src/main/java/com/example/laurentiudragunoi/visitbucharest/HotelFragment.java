@@ -1,12 +1,10 @@
 package com.example.laurentiudragunoi.visitbucharest;
 
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.GridView;
 
 import java.util.ArrayList;
@@ -16,11 +14,9 @@ import java.util.ArrayList;
  */
 public class HotelFragment extends Fragment {
 
-
     public HotelFragment() {
         // Required empty public constructor
     }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -29,34 +25,44 @@ public class HotelFragment extends Fragment {
 
         //Create array for cardView
         final ArrayList<CardObject> card = new ArrayList<CardObject>();
-        card.add(new CardObject(R.drawable.ramada, "Ramada Majestic Bucharest", "Hotel", "4 - Stars"));
-        card.add(new CardObject(R.drawable.radison, "Radisson Blu Hotel Bucharest", "Hotel", "5 - Stars"));
-        card.add(new CardObject(R.drawable.mariott, "JW Marriott Bucharest", "Hotel", "5 - Stars"));
-        card.add(new CardObject(R.drawable.parkinn, "Park Inn by Radisson Bucharest", "Hotel", "4 - Stars"));
-        card.add(new CardObject(R.drawable.hotelroyal, "Royal Hotel Bucharest", "Hotel", "4 - Stars"));
-        card.add(new CardObject(R.drawable.hotelunique, "Unique Bucharest", "Hotel", "4 - Stars"));
+        card.add(new CardObject(R.drawable.ramada, getString(R.string.ramada_name),
+                getString(R.string.ramada_business), getString(R.string.ramada_adress),
+                getString(R.string.ramada_web), getString(R.string.ramada_phone),
+                getString(R.string.ramada_category), getString(R.string.ramada_description),
+                getString(R.string.ramada_schedule)));
+        card.add(new CardObject(R.drawable.radison, getString(R.string.radisson_name),
+                getString(R.string.radisson_business), getString(R.string.radisson_adress),
+                getString(R.string.radisson_web), getString(R.string.radisson_phone),
+                getString(R.string.radisson_category), getString(R.string.radisson_description),
+                getString(R.string.radisson_schedule)));
+        card.add(new CardObject(R.drawable.mariott, getString(R.string.mariott_name),
+                getString(R.string.mariott_business), getString(R.string.mariott_adress),
+                getString(R.string.mariott_web), getString(R.string.mariott_phone),
+                getString(R.string.mariott_category), getString(R.string.mariott_description),
+                getString(R.string.mariott_schedule)));
+        card.add(new CardObject(R.drawable.parkinn, getString(R.string.parkinn_name),
+                getString(R.string.parkinn_business), getString(R.string.parkinn_adress),
+                getString(R.string.parkinn_web), getString(R.string.parkinn_phone),
+                getString(R.string.parkinn_category), getString(R.string.parkinn_description),
+                getString(R.string.parkinn_schedule)));
+        card.add(new CardObject(R.drawable.hotelroyal, getString(R.string.royal_name),
+                getString(R.string.royal_business), getString(R.string.royal_adress),
+                getString(R.string.royal_web), getString(R.string.royal_phone),
+                getString(R.string.royal_category), getString(R.string.royal_description),
+                getString(R.string.royal_schedule)));
+        card.add(new CardObject(R.drawable.hotelunique, getString(R.string.unique_name),
+                getString(R.string.unique_business), getString(R.string.unique_adress),
+                getString(R.string.unique_web), getString(R.string.unique_phone),
+                getString(R.string.unique_category), getString(R.string.unique_description),
+                getString(R.string.unique_schedule)));
 
         // Create an {@link CardObjectAdapter}, that has the source the grid view.
         CardObjectAdapter cardAdapter = new CardObjectAdapter(getActivity(), card);
 
         //Find the grid View  and attach the adapter to the grid view.
-       GridView gridView = (GridView) rootView.findViewById(R.id.grid_view);
+        GridView gridView = (GridView) rootView.findViewById(R.id.grid_view);
         gridView.setAdapter(cardAdapter);
 
-        //Set onClickListener on each CardViewObject, when is clicked on the CardView will open
-        // the DetailCard object that will display all business details for each hotel or attraction.
-        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                //get the {@link CardObject} object at the given position the user clicked on
-                CardObject cardView = card.get(position);
-
-                //On click it will be detailObject opened with intent.
-                
-
-            }
-
-        });
         return rootView;
     }
 

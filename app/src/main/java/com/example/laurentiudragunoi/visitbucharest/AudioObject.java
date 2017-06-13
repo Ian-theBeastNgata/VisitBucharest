@@ -14,14 +14,15 @@ public class AudioObject {
     //Int variable for the audio file resource ID to hold.
     private int mAudioResourceId;
 
-    /**Create the new object with
+    /**
+     * Create the new object with
      *
-     * @param englishTranslation is the expression written in English
+     * @param englishTranslation  is the expression written in English
      * @param romanianTranslation is the Romanian version of the expresion
-     * @param audioResourceId is the int variable that has the audio resource ID.
+     * @param audioResourceId     is the int variable that has the audio resource ID.
      */
 
-    public AudioObject (String englishTranslation, String romanianTranslation, int audioResourceId) {
+    public AudioObject(String englishTranslation, String romanianTranslation, int audioResourceId) {
 
         mEnglishTranslation = englishTranslation;
         mRomanianTranslation = romanianTranslation;

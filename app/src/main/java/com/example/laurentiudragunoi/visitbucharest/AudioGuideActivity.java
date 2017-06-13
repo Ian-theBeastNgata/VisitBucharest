@@ -17,6 +17,28 @@ public class AudioGuideActivity extends AppCompatActivity {
     private MediaPlayer mediaPlayer;
     private MediaPlayer mMediaPlayer;
     private AudioManager mAudioManager;
+    private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener =
+            new AudioManager.OnAudioFocusChangeListener() {
+
+                @Override
+                public void onAudioFocusChange(int focusChange) {
+                    if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
+                            focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK) {
+                        //Pause playback
+                        mMediaPlayer.pause();
+                        mMediaPlayer.seekTo(0);
+                    } else {
+                        if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
+                            //The AUDIOFOCUS_GAIN case means we have regained focus can Resume playback
+                            mMediaPlayer.start();
+                        } else if (focusChange == AudioManager.AUDIOFOCUS_LOSS) {
+                            //The AUDIOFOCUS_LOSS case means we've lost audio focus and stop playback
+                            //and clean up resources
+                            releaseMediaPlayer();
+                        }
+                    }
+                }
+            };
     //This is listener gets triggered when the {@link MediaPlayer} has completed the playing the audio file
     private MediaPlayer.OnCompletionListener mCompletionListener = new MediaPlayer.OnCompletionListener() {
         @Override
@@ -24,29 +46,6 @@ public class AudioGuideActivity extends AppCompatActivity {
             releaseMediaPlayer();
         }
     };
-    private AudioManager.OnAudioFocusChangeListener mOnAudioFocusChangeListener =
-            new AudioManager.OnAudioFocusChangeListener() {
-
-                @Override
-                public void onAudioFocusChange(int focusChange) {
-                    if (focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT ||
-                            focusChange == AudioManager.AUDIOFOCUS_LOSS_TRANSIENT_CAN_DUCK){
-                        //Pause playback
-                        mMediaPlayer.pause();
-                        mMediaPlayer.seekTo(0);
-                    }
-                    else {if (focusChange == AudioManager.AUDIOFOCUS_GAIN) {
-                        //The AUDIOFOCUS_GAIN case means we have regained focus can Resume playback
-                        mMediaPlayer.start();
-                    }
-                    else if (focusChange == AudioManager.AUDIOFOCUS_LOSS){
-                        //The AUDIOFOCUS_LOSS case means we've lost audio focus and stop playback
-                        //and clean up resources
-                        releaseMediaPlayer();
-                    }
-                    }
-                }
-            };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,14 +56,14 @@ public class AudioGuideActivity extends AppCompatActivity {
         mAudioManager = (AudioManager) AudioGuideActivity.this.getSystemService(Context.AUDIO_SERVICE);
         //Create the array list with the romanian expressions.
         final ArrayList<AudioObject> audio = new ArrayList<AudioObject>();
-        audio.add(new AudioObject("Good morning!", "Buna dimineata!", R.raw.bunadimineata));
-        audio.add(new AudioObject("Hello!", "Buna ziua!", R.raw.bunaziua));
-        audio.add(new AudioObject("Hello!", "Salut!", R.raw.salut));
-        audio.add(new AudioObject("Good evening!", "Buna seara!", R.raw.bunaseara));
-        audio.add(new AudioObject("Good night!", "Noapte buna!", R.raw.noaptebuna));
-        audio.add(new AudioObject("Excuse me!", "Ma scuzati!", R.raw.mascuati));
-        audio.add(new AudioObject("Thank you!", "Multumesc!", R.raw.multumesc));
-        audio.add(new AudioObject("Goodbye", "La revedere!", R.raw.larevedere));
+        audio.add(new AudioObject(getString(R.string.en_morning), getString(R.string.ro_morning), R.raw.bunadimineata));
+        audio.add(new AudioObject(getString(R.string.en_hello), getString(R.string.ro_hello), R.raw.bunaziua));
+        audio.add(new AudioObject(getString(R.string.en_hello), getString(R.string.ro_hello2), R.raw.salut));
+        audio.add(new AudioObject(getString(R.string.en_evening), getString(R.string.ro_evening), R.raw.bunaseara));
+        audio.add(new AudioObject(getString(R.string.en_night), getString(R.string.ro_night), R.raw.noaptebuna));
+        audio.add(new AudioObject(getString(R.string.en_excuse), getString(R.string.ro_excuse), R.raw.mascuati));
+        audio.add(new AudioObject(getString(R.string.en_thank), getString(R.string.ro_thank), R.raw.multumesc));
+        audio.add(new AudioObject(getString(R.string.en_goodbye), getString(R.string.ro_goodbye), R.raw.larevedere));
 
         //Create the itemAdapter for the listView that will display the expression.
         AudioObjectAdapter itemAdapter = new AudioObjectAdapter(AudioGuideActivity.this, audio);
@@ -88,8 +87,6 @@ public class AudioGuideActivity extends AppCompatActivity {
                         //  Request permanent focus
                         AudioManager.AUDIOFOCUS_GAIN_TRANSIENT);
                 if (result == AUDIOFOCUS_REQUEST_GRANTED) {
-                    //We have audio focus now.
-
                     //Release the media player if it currently  exists because we are about to
                     //play a different sound file.
                     releaseMediaPlayer();
@@ -105,6 +102,7 @@ public class AudioGuideActivity extends AppCompatActivity {
             }
         });
     }
+
     /**
      * Clean up the media player by releasing its resources.
      */

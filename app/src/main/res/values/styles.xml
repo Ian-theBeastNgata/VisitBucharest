@@ -7,6 +7,136 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
-
+    <!--Audio list style-->
+    <style name="AudioListStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@color/colorAccent</item>
+        <item name="android:orientation">vertical</item>
+    </style>
+    <!--Match_parent width and height-->
+    <style name="MatchMatch">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+    <!--Wrap_content width and height-->
+    <style name="WrapWrap">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!-- Match_parent width and Wrap_content height-->
+    <style name="MatchWrap">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--This is CoordinatorStyle for activity_details.xml and activity_main.xml-->
+    <style name="CoordinatorStyle" parent="MatchMatch">
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+    <!--This is AppBar style for activity_details.xml-->
+    <style name="AppBarsStyleDetails">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/app_bar_height</item>
+        <item name="android:fitsSystemWindows">true</item>
+    </style>
+    <!--CollapsingToolbarLayout style from activity_details.xml-->
+    <style name="CoollapsingToolbarStyle" parent="MatchMatch">
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="layout_scrollFlags">scroll|exitUntilCollapsed</item>
+        <item name="contentScrim">?attr/colorPrimary</item>
+        <item name="expandedTitleMarginStart">@dimen/expend_title_start</item>
+        <item name="expandedTitleMarginEnd">@dimen/expand_title_end</item>
+    </style>
+    <!--Big Image style from activity_details.xml-->
+    <style name="BigImageStyle" parent="MatchMatch">
+        <item name="android:scaleType">centerCrop</item>
+        <item name="android:fitsSystemWindows">true</item>
+        <item name="layout_collapseMode">parallax</item>
+    </style>
+    <!--Toolbar Style from activity_details.xml-->
+    <style name="ToolbarStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+        <item name="layout_collapseMode">pin</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+    </style>
+    <!--TextSTyle for the activity_details.xml-->
+    <style name="TextStyleDetails" parent="WrapWrap">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:drawablePadding">@dimen/drawble_padding</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:layout_margin">@dimen/text_margin</item>
+    </style>
+    <!--FABShare Style for activity_details.xml -->
+    <style name="ShareFloatingButton" parent="WrapWrap">
+        <item name="android:layout_margin">@dimen/text_margin</item>
+        <item name="fabSize">normal</item>
+        <item name="layout_anchor">@id/app_barr_layout</item>
+        <item name="layout_anchorGravity">bottom|right|end</item>
+    </style>
+    <!--ViewPagerStyle from activity_main.xml-->
+    <style name="ViewPageStyle">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:background">@android:color/white</item>
+    </style>
+    <!--FABAudio Style for activity_main.xml -->
+    <style name="AudioFloatingButton" parent="WrapWrap">
+        <item name="android:layout_margin">@dimen/margin</item>
+        <item name="fabSize">normal</item>
+        <item name="layout_behavior">@string/appbar_scrolling_view_behavior</item>
+        <item name="android:layout_gravity">end|bottom</item>
+    </style>
+    <!--inearLayout for audio text from Audio_item.xml-->
+    <style name="AudioLinearLayout">
+        <item name="android:layout_margin">@dimen/text_margin</item>
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <!--AudioText from audio_item.xml.-->
+    <style name="AudioText">
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0dp</item>
+    </style>
+    <!--AudioTextBold from audio_item.xml.-->
+    <style name="AudioTextBold" parent="AudioText">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <!--PlayImage for audio_item.xml-->
+    <style name="PlayImage">
+        <item name="android:layout_margin">@dimen/text_margin</item>
+        <item name="android:layout_width">@dimen/play_dimen</item>
+        <item name="android:layout_height">@dimen/play_dimen</item>
+    </style>
+    <!--GridViewStyle-->
+    <style name="GridViewStyle" parent="MatchMatch">
+        <item name="android:columnWidth">@dimen/grid_colom</item>
+        <item name="android:gravity">center</item>
+        <item name="android:horizontalSpacing">@dimen/spacing</item>
+        <item name="android:verticalSpacing">@dimen/spacing</item>
+        <item name="android:numColumns">auto_fit</item>
+        <item name="android:stretchMode">columnWidth</item>
+    </style>
+    <!--CardView style-->
+    <style name="CardViewStyle" parent="WrapWrap">
+        <item name="android:clickable">true</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardCornerRadius">@dimen/card_dimen</item>
+        <item name="cardElevation">@dimen/card_dimen</item>
+        <item name="android:foreground">?android:attr/selectableItemBackground</item>
+    </style>
+    <!--CardView text style-->
+    <style name="CardViewText" parent="WrapWrap">
+        <item name="android:textSize">@dimen/text_card_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:layout_marginTop">@dimen/spacing</item>
+        <item name="android:layout_marginLeft">@dimen/spacing</item>
+    </style>
 
 </resources>
