@@ -60,20 +60,7 @@ public class CardObject {
         mBusinessHours = businessHours;
     }
 
-    @Override
-    public String toString() {
-        return "Card{" +
-                "mImageResourceId='" + mImageResourceId + '\'' +
-                ", mName='" + mName + '\'' +
-                ", mNameBusiness=" + mNameBusiness +
-                ", mCategory=" + mCategory +
-                ", mLocalization=" + mLocalization +
-                ", mWebsite=" + mWebsite +
-                ", mPhone=" + mPhone +
-                ", mDescription=" + mDescription +
-                ", mBusinessHours=" + mBusinessHours +
-                '}';
-    }
+
 
     //Get the int variable for the image resource ID
     public int getImageResourceId() {

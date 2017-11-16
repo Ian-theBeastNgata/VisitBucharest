@@ -68,7 +68,7 @@ public class AudioGuideActivity extends AppCompatActivity {
         //Create the itemAdapter for the listView that will display the expression.
         AudioObjectAdapter itemAdapter = new AudioObjectAdapter(AudioGuideActivity.this, audio);
 
-        //Find the listView witch is decared in audio_list.xml.
+        //Find the listView witch is declared in audio_list.xml.
         ListView audioListView = (ListView) findViewById(R.id.list);
 
         //This will make the listView to have all the needed items that are set by the Adapter.

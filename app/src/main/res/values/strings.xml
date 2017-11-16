@@ -2,6 +2,12 @@
     <string name="app_name">Visit Bucharest</string>
     <string name="audio_name">Audio Guide</string>
     <string name="image">Image</string>
+    <!--Fragments names-->
+    <string name="attraction_name">Attractions</string>
+    <string name="food_name">Food</string>
+    <string name="hotel_name">Hotel</string>
+    <string name="kidsattractions_name">Kids Attractions</string>
+    <string name="nightlife_name">Night Life</string>
     <!--Array text for AudioActivity-->
     <string name="en_morning">Good morning!</string>
     <string name="ro_morning">Buna dimineata!</string>
