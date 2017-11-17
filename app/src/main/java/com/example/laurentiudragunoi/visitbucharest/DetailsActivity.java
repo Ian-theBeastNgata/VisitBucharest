@@ -15,7 +15,7 @@ public class DetailsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_details);
+        setContentView(R.layout.activity_details_constraint);
 
         Intent intent = getIntent();
         final String detailName = intent.getStringExtra("name");

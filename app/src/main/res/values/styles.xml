@@ -69,6 +69,15 @@
         <item name="android:layout_gravity">left</item>
         <item name="android:layout_margin">@dimen/text_margin</item>
     </style>
+
+    <style name="TextStyleDetails2">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:textSize">@dimen/text_size</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="android:drawablePadding">@dimen/drawble_padding</item>
+        <item name="android:layout_gravity">left</item>
+        <item name="android:layout_margin">@dimen/text_margin</item>
+    </style>
     <!--FABShare Style for activity_details.xml -->
     <style name="ShareFloatingButton" parent="WrapWrap">
         <item name="android:layout_margin">@dimen/text_margin</item>
